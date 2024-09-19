@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Home - BookVerse</title>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="upperNav">
+            <a class="mainLogo" href="#"><img  src="images/BooKVerse(2).png" alt=""></a>
+            <div class="searchBox">
+                <form action="#" method="post">
+                    <div class="searchInput">
+                        <input type="text" placeholder=" " name="searchText" id="searchText" required>
+                        <p class="labelText">Search for Book, Author or Reviewer</p>
+                    </div>
+                    <button type="submit"><img src="images/icons8-search-30.png" alt="Search"></button>
+                </form>
+                
+                <div class="suggestions" id="suggestions">
+                    <!-- <div class="suggestedText">Rahman Shoron</div>
+                    <div class="suggestedText">Shohanur Rahman Shoron</div>
+                    <div class="suggestedText">Shohanur Shoron</div> -->
+                </div>
+
+            </div>
+            <div class="profileInfo">
+                <a class="signuporin" href="#">LogIn</a>
+                <a class="signuporin" href="#">SingUp</a>
+                <!-- <div class="profileImage"></div> -->
+            </div>
+        </div>
+        <div class="lowernavbar">
+            <div class="menuOptions">
+
+                <div class="menuLinks">
+                    <div class="linkWrapper">
+                        <a href="#" class="topLink">Home</a><br>
+                        <a href="#" class="bottomLink">Home</a>
+                    </div>
+                </div>
+
+                <div class="menuLinks">
+                    <div class="linkWrapper">
+                        <a href="#" class="topLink">Categories</a><br>
+                        <a href="#" class="bottomLink">Categories</a>
+                    </div>
+                </div>
+
+                <div class="menuLinks">
+                    <div class="linkWrapper">
+                        <a href="#" class="topLink">Favourites</a><br>
+                        <a href="#" class="bottomLink">Favourites</a>
+                    </div>
+                </div>
+
+                <div class="menuLinks">
+                    <div class="linkWrapper">
+                        <a href="#" class="topLink">Discover</a><br>
+                        <a href="#" class="bottomLink">Discover</a>
+                    </div>
+                </div>
+
+                <div class="menuLinks">
+                    <div class="linkWrapper">
+                        <a href="#" class="topLink">Events</a><br>
+                        <a href="#" class="bottomLink">Events</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="helpLine">
+                this is the help line
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function setDynamicMaxHeight() {
+            const menuLinks = document.querySelectorAll('.menuLinks');
+            
+            menuLinks.forEach(link => {
+                const originalHeight = link.offsetHeight;
+                link.style.maxHeight = `${originalHeight / 2}px`;
+            });
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('load', setDynamicMaxHeight);
+
+        // Optionally, call it on window resize if the content might change
+        window.addEventListener('resize', setDynamicMaxHeight);
+    </script>
+
+</body>
+</html>
