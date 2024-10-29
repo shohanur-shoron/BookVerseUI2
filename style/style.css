@@ -14,12 +14,19 @@
     background: #0a614f;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
 .navbar{
     width: 100%;
     height: 18vh;
     position: fixed;
     display: flex;
     flex-direction: column;
+    transition: all 0.2s ease;
+    /* transform: translateY(-10vh); */
 }
 
 .navbar .upperNav{
@@ -42,58 +49,58 @@
             height: 50%;
         }
     }
+}
 
-    .searchBox{
-        border: 1px solid #5DBF17;
-        padding: 3px;
-        background-color: #ffffff;
+.searchBox{
+    border: 1px solid #5DBF17;
+    padding: 3px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 8px;
+
+    form{
+        display: flex;
         position: relative;
-        border-radius: 8px;
 
-        form{
-            display: flex;
+        .searchInput{
             position: relative;
+            width: 25vw;
 
-            .searchInput{
-                position: relative;
-                width: 25vw;
-
-                input, p{
-                    position: absolute;
-                    font-family: "Poppins", system-ui;
-                    font-size: 1.1rem;
-                    font-weight: 300;
-                    transition: all 0.2s ease;
-                }
-
-                input{
-                    height: 100%;
-                    width: 100%;
-                    background-color: transparent;
-                    outline: none;
-                    border: none;
-                    padding-left: 10px;
-                    z-index: 2;
-                }
-                p{
-                    top: 50%;
-                    left: 10px;
-                    transform: translateY(-50%);
-                    opacity: 0.8;
-                }
-
+            input, p{
+                position: absolute;
+                font-family: "Poppins", system-ui;
+                font-size: 1.1rem;
+                font-weight: 300;
+                transition: all 0.2s ease;
             }
 
-            button{
-                height: 40px;
-                width: 10%;
-                background-color: #5DBF17;
-                border-radius: 7px;
+            input{
+                height: 100%;
+                width: 100%;
+                background-color: transparent;
+                outline: none;
                 border: none;
-                cursor: pointer;
-                img{
-                    height: 70%;
-                }
+                padding-left: 10px;
+                z-index: 2;
+            }
+            p{
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                opacity: 0.8;
+            }
+
+        }
+
+        button{
+            height: 40px;
+            width: 10%;
+            background-color: #5DBF17;
+            border-radius: 7px;
+            border: none;
+            cursor: pointer;
+            img{
+                height: 70%;
             }
         }
     }
@@ -150,6 +157,11 @@
     }
 }
 
+.lowerSearchBox{
+    scale: 0.9;
+    display: none;
+}
+
 .profileInfo{
 
     .signuporin{
@@ -181,23 +193,48 @@
         }
     }
 
-    .profileImage{
-        height: 7vh;
-        width: 7vh;
+    
+}
+
+.profileImage{
+    height: 7vh;
+    width: 7vh;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    img{
+        height: 100%;
+        width: 100%;
         border-radius: 50%;
-        border: 1px solid #5DBF17;
+        object-fit: cover;
     }
+}
+
+.profileImage2{
+    display: none;
+    height: 6vh;
+    width: 6vh;
 }
 
 .lowernavbar{
     width: 100%;
     height: 8vh;
+    background-color: #ffffff;
     border-bottom: 1px solid #F5F5F5;
     box-shadow: 1px 1px 3px #bbbbbb7e;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+}
+
+.lowernavbar .menuOptions #manu2ndLogo{
+    display: none;
+    width: 10rem;
+
+    img{
+        width: 75%;
+    }
 }
 
 .lowernavbar .menuOptions{
@@ -231,4 +268,109 @@
             color: #4cac07;
         }
     }
+}
+
+
+.helpLine{
+    font-family: "Poppins", system-ui;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 3px 5px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #5DBF17;
+}
+
+/* this is the test page css. remove this after the test page is done */
+.test{
+    width: 100%;
+    height: 100vh;
+    background-color: #fdfdfd;
+    /* border-bottom: 4px solid #F5F5F5; */
+}
+
+
+.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.footer .ftitle{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-left: 2vw;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.footer .flinks{
+    width: 100%;
+    height: 70%;
+    display: flex;
+
+    p{
+        font-family: "Roboto Condensed", sans-serif;
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+        padding-left: 3vw;
+        padding-top: 0%;
+    }
+
+    .linkDiv1, .linkDiv2{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vh;
+
+        a{
+            font-family: "Roboto Condensed", sans-serif;
+            color: white;
+            font-size: 4rem;
+            font-weight: 700;
+            padding-left: 5vh;
+            text-decoration: none;
+            transition: color 300ms;
+
+            &:hover{
+                color: #73ff00;
+            }
+        }
+
+    }
+
+    .smallLink{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-family: "Roboto Condensed", sans-serif;
+        padding-left: 10vh;
+        
+        a{
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 200ms;
+
+            &:hover{
+                color: #73ff00;
+            }
+        }
+    } 
+}
+
+.highlight {
+    background-color: #d89999b0; /* Change color as needed */
 }

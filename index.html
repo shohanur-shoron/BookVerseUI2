@@ -12,33 +12,36 @@
 </head>
 <body>
     
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <div class="upperNav">
             <a class="mainLogo" href="#"><img  src="images/BooKVerse(2).png" alt=""></a>
             <div class="searchBox">
                 <form action="#" method="post">
                     <div class="searchInput">
-                        <input type="text" placeholder=" " name="searchText" id="searchText" required>
+                        <input type="text" placeholder=" " name="searchText" id="searchBox1" autocomplete="off" required>
                         <p class="labelText">Search for Book, Author or Reviewer</p>
                     </div>
                     <button type="submit"><img src="images/icons8-search-30.png" alt="Search"></button>
                 </form>
                 
                 <div class="suggestions" id="suggestions">
-                    <!-- <div class="suggestedText">Rahman Shoron</div>
-                    <div class="suggestedText">Shohanur Rahman Shoron</div>
-                    <div class="suggestedText">Shohanur Shoron</div> -->
                 </div>
 
             </div>
             <div class="profileInfo">
-                <a class="signuporin" href="#">LogIn</a>
-                <a class="signuporin" href="#">SingUp</a>
-                <!-- <div class="profileImage"></div> -->
+                <!-- <a class="signuporin" href="#">LogIn</a>
+                <a class="signuporin" href="#">SingUp</a> -->
+                <div class="profileImage">
+                    <img src="images/pexels-danxavier-1239291 (1).jpg" alt="">
+                </div>
             </div>
         </div>
         <div class="lowernavbar">
             <div class="menuOptions">
+
+                <div id="manu2ndLogo">
+                    <img src="images/BooKVerse(2).png" alt="">
+                </div>
 
                 <div class="menuLinks">
                     <div class="linkWrapper">
@@ -76,14 +79,69 @@
                 </div>
 
             </div>
-            <div class="helpLine">
+
+            <div class="searchBox lowerSearchBox" id="lowerSearchBox">
+                <form action="#" method="post">
+                    <div class="searchInput">
+                        <input type="text" placeholder=" " name="searchText" id="searchBox20" autocomplete="off" required>
+                        <p class="labelText">Search for Book, Author or Reviewer</p>
+                    </div>
+                    <button type="submit"><img src="images/icons8-search-30.png" alt="Search"></button>
+                </form>
+                
+                <div class="suggestions" id="suggestions2">
+                </div>
+
+            </div>
+
+
+            <div class="helpLine" id="helpLine">
                 this is the help line
+            </div>
+            <div class="profileImage profileImage2" id="profileImage">
+                <img src="images/pexels-danxavier-1239291 (1).jpg" alt="">
             </div>
         </div>
     </div>
 
 
 
+
+    <!-- <div class="test"></div>
+    <div class="test"></div>
+    <div class="test"></div> -->
+    <div class="test"></div>
+
+    <div class="footer">
+        <div class="ftitle">
+            @BooKVerse
+        </div>
+        <div class="flinks">
+            <p>Keep Exploring</p>
+            <div class="linkDiv1">
+                <a href="#">What we do</a>
+                <a href="#">What we are</a>
+                <a href="#">Out Impact</a>
+                <a href="#">Our Team</a>
+            </div>
+            <div class="linkDiv2">
+                <a href="#">What we do</a>
+                <a href="#">What we are</a>
+                <a href="#">Out Impact</a>
+                <a href="#">Our Team</a>
+            </div>
+            <div class="smallLink">
+                <a href="#">Press</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">BookVerse Subscription</a>
+                <a href="#">Careers</a>
+                <a href="#">Help Center</a>
+                <a href="#">BookVerse Deals</a>
+                <a href="#">Visit Library</a>
+                <a href="#">Become an Affiliate</a>
+            </div>
+        </div>
+    </div>
 
 
     <script>
@@ -96,12 +154,12 @@
             });
         }
 
-        // Call the function when the page loads
         window.addEventListener('load', setDynamicMaxHeight);
-
-        // Optionally, call it on window resize if the content might change
         window.addEventListener('resize', setDynamicMaxHeight);
     </script>
+    <script src="js/app.js"></script>
+    <script src="js/search-suggestions.js"></script>
+    <script src="js/search-suggestions2.js"></script>
 
 </body>
 </html>
