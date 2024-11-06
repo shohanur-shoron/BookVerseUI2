@@ -291,7 +291,7 @@
         h3{
             font-size: 1.5rem;
             margin-left: 10px;
-            color: #5DBF17;
+            color: #61e403;
         }
         p{
             font-size: 0.8rem;
@@ -354,7 +354,7 @@
             text-decoration: none;
             transition: all 0.2s ease;
             &:hover{
-                color: #5DBF17;
+                color: #5cc90e;
             }
         }
     }

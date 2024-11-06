@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
         manu2ndLogo.style.display = 'none';
         lowerSearchBox.style.display = 'none';
         profileImage.style.display = 'none';
-        helpLine.style.display = 'block';
+        helpLine.style.display = 'flex';
         suggestions.style.display = 'flex';
     }
     if(currentScroll > lastScroll){
