@@ -273,20 +273,40 @@
 
 .helpLine{
     font-family: "Poppins", system-ui;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 3px 5px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #5DBF17;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .helpLineImage{
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img{
+            height: 70%;
+        }
+    }
+
+    .helpLineText{
+        h3{
+            font-size: 1.5rem;
+            margin-left: 10px;
+            color: #5DBF17;
+        }
+        p{
+            font-size: 0.8rem;
+            margin-left: 10px;
+            color: #000000;
+            font-weight: 300;
+        }
+    }
 }
 
 /* this is the test page css. remove this after the test page is done */
-.test{
+.NavbarCover{
     width: 100%;
-    height: 20vh;
+    height: 18vh;
     background-color: #fdfdfd;
-    /* border-bottom: 4px solid #F5F5F5; */
 }
 
 .highlight {
