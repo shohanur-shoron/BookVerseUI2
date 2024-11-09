@@ -162,7 +162,7 @@
     display: none;
 }
 
-.profileInfo{
+.profileInfo, .proImgWrapper{
 
     .signuporin{
         font-family: "Poppins", system-ui;
@@ -210,8 +210,13 @@
     }
 }
 
-.profileImage2{
+.proImgWrapper{
     display: none;
+    gap: 10px;
+}
+
+.profileImage2{
+    display: block;
     height: 6vh;
     width: 6vh;
 }
@@ -305,7 +310,7 @@
 /* this is the test page css. remove this after the test page is done */
 .NavbarCover{
     width: 100%;
-    height: 18vh;
+    height: 108vh;
     background-color: #fdfdfd;
 }
 
@@ -374,4 +379,89 @@
             cursor: pointer;
         }
     }
+}
+
+
+.sideMenu{
+    position: fixed;
+    height: 100vh;
+    width: 18vw;
+    background-color: #131313;
+    z-index: 100999;
+    right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px 10px;
+}
+
+.sideMenuCover{
+    position: fixed;
+    height: 100vh;
+    width: 92vw;
+    left: 0;
+    z-index: 100998;
+    background-color: #13131311;
+}
+
+.sideMenu{
+
+    .proInfo{
+        display: flex;
+        align-items: center;
+        padding: 3px 5px;
+        border-radius: 7px;
+        transition: all 0.1s ease;
+        width: 100%;
+        
+
+        .proImageInSideMenu{
+            height: 5vh;
+            width: 5vh;
+
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .nameAndUsername{
+            font-family: "Roboto Condensed", serif;
+            color: white;
+
+            p:first-child {
+                font-weight: 500;
+                margin-left: 5px;
+            }
+            p:last-child {
+                font-weight: 300;
+                font-size: 0.8rem;
+                margin-left: 5px;
+            }
+        }
+
+        .closeBtn{
+            height: 4.5vh;
+            width: 4.5vh;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7px;
+            transition: all 0.1s ease;
+            cursor: pointer;
+
+            img{
+                height: 60%;
+            }
+
+            &:hover{
+                background-color: #252C34;
+            }
+        }
+        
+    }
+
+
 }

@@ -1,10 +1,10 @@
 const navbar = document.getElementById('navbar');
 const manu2ndLogo = document.getElementById('manu2ndLogo');
 const lowerSearchBox = document.getElementById('lowerSearchBox');
-const profileImage = document.getElementById('profileImage');
 const helpLine = document.getElementById('helpLine');
 const suggestions2 = document.getElementById('suggestions2');
 const suggestions = document.getElementById('suggestions');
+const proImgWrapper = document.getElementById('proImgWrapper');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
         navbar.style.transform = 'translateY(0)';
         manu2ndLogo.style.display = 'none';
         lowerSearchBox.style.display = 'none';
-        profileImage.style.display = 'none';
+        proImgWrapper.style.display = 'none';
         helpLine.style.display = 'flex';
         suggestions.style.display = 'flex';
     }
@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
         navbar.style.transform = 'translateY(-10vh)';
         manu2ndLogo.style.display = 'block';
         lowerSearchBox.style.display = 'block';
-        profileImage.style.display = 'block';
+        proImgWrapper.style.display = 'flex';
         helpLine.style.display = 'none';
         suggestions2.style.display = 'flex';
         suggestions.style.display = 'none';
