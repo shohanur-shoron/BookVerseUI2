@@ -310,7 +310,7 @@
 /* this is the test page css. remove this after the test page is done */
 .NavbarCover{
     width: 100%;
-    height: 108vh;
+    height: 18vh;
     background-color: #fdfdfd;
 }
 
@@ -386,21 +386,25 @@
     position: fixed;
     height: 100vh;
     width: 18vw;
-    background-color: #131313;
+    background-color: #ffffff;
     z-index: 100999;
     right: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 20px 10px;
+    transition: all 0.3s ease;
+    transform: translateX(18vw);
 }
 
 .sideMenuCover{
+    display: none;
     position: fixed;
     height: 100vh;
-    width: 92vw;
+    width: 100vw;
     left: 0;
     z-index: 100998;
-    background-color: #13131311;
+    background-color: #13131338;
+    transition: all 0.3s ease;
 }
 
 .sideMenu{
@@ -428,7 +432,7 @@
 
         .nameAndUsername{
             font-family: "Roboto Condensed", serif;
-            color: white;
+            color: rgb(0, 0, 0);
 
             p:first-child {
                 font-weight: 500;
@@ -457,11 +461,53 @@
             }
 
             &:hover{
-                background-color: #252C34;
+                background-color: #dfdfdf;
             }
         }
         
     }
 
+    .setProfile{
+        margin-top: 30px;
+    }
 
+    .intersection{
+        margin-top: 7px;
+        width: 100%;
+        height: 1px;
+        background-color: #dfdfdf;
+        margin-bottom: 6px;
+    }
+
+}
+
+.genericStyle{
+    width: 100%;
+    height: 4vh;
+    border-radius: 7px;
+    transition: all 0.1s ease;
+    padding: 0px 10px;
+    text-decoration: none;
+    margin-top: 1px;
+
+    img{
+        height: 65%;
+        margin-right: 5px;
+    }
+
+    p{
+        font-family: "Roboto Condensed", serif;
+        font-size: 0.95rem;
+        color: #131313;
+    }
+
+    &:hover{
+        background-color: #dfdfdf;
+    }
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
